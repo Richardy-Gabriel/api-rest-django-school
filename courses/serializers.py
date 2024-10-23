@@ -17,6 +17,7 @@ class EvaluationSerializer(serializers.ModelSerializer):
             'email',
             'comment',
             'created',
+            'evaluation_number',
             'active'
         )
 

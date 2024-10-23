@@ -27,7 +27,7 @@ class Evaluation(Base):
     name = models.CharField(max_length=255)
     email = models.EmailField()
     comment = models.TextField(blank=True, default='')
-    evaluation = models.DecimalField(max_digits=2, decimal_places=1)
+    evaluation_number = models.DecimalField(max_digits=2, decimal_places=1)
 
     class Meta:
         verbose_name = 'Evaluation'
@@ -35,4 +35,4 @@ class Evaluation(Base):
         unique_together = ['email', 'course']
 
     def __str__(self):
-        return f'{self.name} avaliou o curso {self.course} com a nota {self.evaluation}'
+        return f'{self.name} avaliou o curso {self.course} com a nota {self.evaluation_number}'
